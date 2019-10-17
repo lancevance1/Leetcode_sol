@@ -20,7 +20,7 @@ public class ThreeSum {
      * ]
      *
      * time O(n^2)
-     * space O(n)
+     * space O(n^2)
      *
      * @param nums
      * @return
