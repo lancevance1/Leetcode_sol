@@ -1,4 +1,6 @@
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
 
@@ -28,15 +30,22 @@ public class Main {
 //        }
 //
 //    }
+//
+//        int[] arr;
+//        int[] input = {5,5,5,7};
+//        arr = SearchRange.searchRange(input, 5  );
+//
+//        for (int i = 0; i < arr.length ; i++) {
+//            System.out.print(arr[i]);
+//
+//        }
 
-        int[] arr;
-        int[] input = {5,5,5,7};
-        arr = SearchRange.searchRange(input, 5  );
 
-        for (int i = 0; i < arr.length ; i++) {
-            System.out.print(arr[i]);
+        SubarrayswithKDifferentIntegers sub = new SubarrayswithKDifferentIntegers();
+        int[]arr ={1,2,1,2,3};
+        int i = sub.atMostKDistinct(arr,2);
 
-        }
+        System.out.println(i);
     }
 
 }
