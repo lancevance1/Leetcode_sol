@@ -52,4 +52,7 @@ public class FirstBadVersion {
 
         return l; //r+1
     }
+    public boolean isBadVersion(int m){
+            return true;
+    }
 }

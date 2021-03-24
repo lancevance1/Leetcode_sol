@@ -41,11 +41,24 @@ public class Main {
 //        }
 
 
-        SubarrayswithKDifferentIntegers sub = new SubarrayswithKDifferentIntegers();
-        int[]arr ={1,2,1,2,3};
-        int i = sub.atMostKDistinct(arr,2);
+//        ImplementstrStr rep = new ImplementstrStr();
+//        String s = "aabcaabxaaaz";
+//        int[]arr =new int[s.length()];
+//
+//        arr = rep.zArray(s);
+//        for (int i = 0; i < arr.length; i++) {
+//            System.out.println(arr[i]);
+//        }
 
-        System.out.println(i);
+        int[] arr={4,4,9,1,4,5,9,3,3};
+        Sort test = new Sort();
+        test.quicksort(arr,0,arr.length-1);
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
+
     }
 
 }
