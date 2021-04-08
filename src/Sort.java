@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Sort {
+    //average TC: O(nlogn) SC:O(1)
     public void quicksort(int[] arr, int i, int j){
         if(i<j){
             int mid = partition(arr,i,j);
