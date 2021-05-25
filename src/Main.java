@@ -49,16 +49,26 @@ public class Main {
 //        for (int i = 0; i < arr.length; i++) {
 //            System.out.println(arr[i]);
 //        }
-
+//        int[] arr={7,6,5,4,3,2,1};
         int[] arr={-2,1,-3,4,-1,2,1,-5,4};
-//        Sort test = new Sort();
+//        int[] arr={7,6,5,4,3,2,1};
+        Sort test = new Sort();
+//        test.mergeSort(arr,0,arr.length-1);
 //        test.quicksort(arr,0,arr.length-1);
-//
+
 //        for (int i = 0; i < arr.length; i++) {
 //            System.out.println(arr[i]);
 //        }
 
-        System.out.println(MaximumSubarray.maxSubArray(arr));
+//        System.out.println(MaximumSubarray.maxSubArray(arr));
+
+//        Heap heap = new Heap();
+//        int[] res = heap.heapSort(arr);
+//        test.insertSort(arr);
+        test.bubleSort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
 
 
     }
