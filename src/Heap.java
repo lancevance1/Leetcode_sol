@@ -22,10 +22,10 @@ public class Heap {
     public void heapify(int[]arr, int index, int size) {
         int largestIndex = index;
 
-        if (2 * index + 1 < size && arr[largestIndex] < arr[2 * index + 1]) {
+        if (2 * index + 1 < size && arr[largestIndex] >arr[2 * index + 1]) {
             largestIndex = 2 * index + 1;
         }
-        if (2 * index + 2 < size && arr[largestIndex] < arr[2 * index + 2]) {
+        if (2 * index + 2 < size && arr[largestIndex] > arr[2 * index + 2]) {
             largestIndex = 2 * index + 2;
         }
         if (largestIndex != index) {

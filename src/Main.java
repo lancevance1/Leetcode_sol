@@ -50,9 +50,9 @@ public class Main {
 //            System.out.println(arr[i]);
 //        }
 //        int[] arr={7,6,5,4,3,2,1};
-        int[] arr={-2,1,-3,4,-1,2,1,-5,4};
+//        int[] arr={-2,1,-3,4,-1,2,1,-5,4};
 //        int[] arr={7,6,5,4,3,2,1};
-        Sort test = new Sort();
+//        Sort test = new Sort();
 //        test.mergeSort(arr,0,arr.length-1);
 //        test.quicksort(arr,0,arr.length-1);
 
@@ -65,9 +65,14 @@ public class Main {
 //        Heap heap = new Heap();
 //        int[] res = heap.heapSort(arr);
 //        test.insertSort(arr);
-        test.bubleSort(arr);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i]);
+//        test.bubleSort(arr);
+        TopKFrequentElements test1 = new TopKFrequentElements();
+
+              int[] arr={-1,1,4,-4,3,5,4,-2,3,-1};
+              int k =3;
+        int [] ans = test1.topKFrequent(arr,k);
+        for (int i = 0; i < ans.length; i++) {
+            System.out.println(ans[i]);
         }
 
 
