@@ -36,6 +36,7 @@
 
 
 public class SearchInsertPosition {
+
     //    //soln1: binary search 1, [left, right]
 //    public int searchInsert(int[] nums, int target) {
 //        int r = nums.length-1, l = 0, ans =0, m;
@@ -70,18 +71,38 @@ public class SearchInsertPosition {
 //        return l;
 //    }
 
-    //soln3
+//    //soln3
+//    public int searchInsert(int[] nums, int target) {
+//        int k = 0, n = nums.length;
+//        if(nums[0]>target)return 0;
+//        for (int b = n/2; b >= 1; b /= 2) {
+//            while (k+b < n && nums[k+b] <= target) k += b;
+//        }
+//        if (nums[k] == target) {
+//// x found at index k
+//            return k;
+//        }
+//        return k+1;
+//    }
+
     public int searchInsert(int[] nums, int target) {
-        int k = 0, n = nums.length;
-        if(nums[0]>target)return 0;
-        for (int b = n/2; b >= 1; b /= 2) {
-            while (k+b < n && nums[k+b] <= target) k += b;
+        if (nums[nums.length-1]<target)return nums.length;
+        if (nums[0]>target)return 0;
+
+        int left=0,right=nums.length-1,mid=0;
+        while(left<right){
+            mid=left+(right-left)/2;
+            if (nums[mid]==target){
+                return mid;
+            }else if(nums[mid]<target){
+                left = mid+1;
+            }else{
+                right = mid-1;
+            }
+
         }
-        if (nums[k] == target) {
-// x found at index k
-            return k;
-        }
-        return k+1;
+
+        return mid;
     }
 
 }

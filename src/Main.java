@@ -1,7 +1,3 @@
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -66,16 +62,29 @@ public class Main {
 //        int[] res = heap.heapSort(arr);
 //        test.insertSort(arr);
 //        test.bubleSort(arr);
-        TopKFrequentElements test1 = new TopKFrequentElements();
+//        TopKFrequentElements test1 = new TopKFrequentElements();
+//
+//              int[] arr={-1,1,4,-4,3,5,4,-2,3,-1};
+//              int k =3;
+//        int [] ans = test1.topKFrequent(arr,k);
+//        for (int i = 0; i < ans.length; i++) {
+//            System.out.println(ans[i]);
+//        }
 
-              int[] arr={-1,1,4,-4,3,5,4,-2,3,-1};
-              int k =3;
-        int [] ans = test1.topKFrequent(arr,k);
-        for (int i = 0; i < ans.length; i++) {
-            System.out.println(ans[i]);
-        }
+    LinkList list = new LinkList(1);
+    list.push(3);
+        list.push(2);
+        list.push(4);
 
+        list.printList();
+//       LinkList.Node node =  list.searchNode(4);
+//       System.out.println(node.previous.data);
+list.deleteNode(3);
 
+        list.deleteNode(2);
+        list.deleteNode(1);
+        list.deleteNode(4);
+        list.printList();
     }
 
 }
