@@ -71,20 +71,37 @@ public class Main {
 //            System.out.println(ans[i]);
 //        }
 
-    LinkList list = new LinkList(1);
-    list.push(3);
-        list.push(2);
-        list.push(4);
+//    LinkList list = new LinkList(1);
+//    list.push(3);
+//        list.push(2);
+//        list.push(4);
+//
+//        list.printList();
+////       LinkList.Node node =  list.searchNode(4);
+////       System.out.println(node.previous.data);
+//list.deleteNode(3);
+//
+//        list.deleteNode(2);
+//        list.deleteNode(1);
+//        list.deleteNode(4);
+//        list.printList();
+//    }
+//        FindWinneronaTicTacToeGame f =new FindWinneronaTicTacToeGame();
+//        int[][] arr = new int[][]{{0,2},{1,0},{2,2},{1,2},{2,0},{0,0},{0,1},{2,1},{1,1}};
+//        System.out.println(f.tictactoe(arr));
+        ReverseLinkedList.ListNode node1 = new ReverseLinkedList.ListNode(1);
+        ReverseLinkedList.ListNode node2 = new ReverseLinkedList.ListNode(2);
+        ReverseLinkedList.ListNode node3 = new ReverseLinkedList.ListNode(3);
+        node1.next =node2;
+        node2.next = node3;
+        System.out.println(node1);
+        System.out.println(node2);
+        System.out.println(node3);
+        while(node3!=null){
+            System.out.println(node3.val);
+        node3=node3.next;
+    }
 
-        list.printList();
-//       LinkList.Node node =  list.searchNode(4);
-//       System.out.println(node.previous.data);
-list.deleteNode(3);
-
-        list.deleteNode(2);
-        list.deleteNode(1);
-        list.deleteNode(4);
-        list.printList();
     }
 
 }
