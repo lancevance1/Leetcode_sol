@@ -89,18 +89,28 @@ public class Main {
 //        FindWinneronaTicTacToeGame f =new FindWinneronaTicTacToeGame();
 //        int[][] arr = new int[][]{{0,2},{1,0},{2,2},{1,2},{2,0},{0,0},{0,1},{2,1},{1,1}};
 //        System.out.println(f.tictactoe(arr));
-        ReverseLinkedList.ListNode node1 = new ReverseLinkedList.ListNode(1);
-        ReverseLinkedList.ListNode node2 = new ReverseLinkedList.ListNode(2);
-        ReverseLinkedList.ListNode node3 = new ReverseLinkedList.ListNode(3);
-        node1.next =node2;
-        node2.next = node3;
-        System.out.println(node1);
-        System.out.println(node2);
-        System.out.println(node3);
-        while(node3!=null){
-            System.out.println(node3.val);
-        node3=node3.next;
-    }
+//        ReverseLinkedList.ListNode node1 = new ReverseLinkedList.ListNode(1);
+//        ReverseLinkedList.ListNode node2 = new ReverseLinkedList.ListNode(2);
+//        ReverseLinkedList.ListNode node3 = new ReverseLinkedList.ListNode(3);
+//        node1.next =node2;
+//        node2.next = node3;
+//        System.out.println(node1);
+//        System.out.println(node2);
+//        System.out.println(node3);
+//        while(node3!=null){
+//            System.out.println(node3.val);
+//        node3=node3.next;
+//    }
+        int [][] arr = {{2,0},{0,0},{2,2}};
+        SnakeGame test = new SnakeGame(3,3,arr);
+        //["R"], ["D"], ["R"], ["U"], ["L"], ["U"]
+        String[] moveList ={"R"};
+        for (int i = 0; i < moveList.length; i++) {
+              test.move(moveList[i]);
+        }
+
+
+
 
     }
 
