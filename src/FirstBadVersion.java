@@ -25,7 +25,7 @@
  *
  * Constraints:
  *
- * 1 <= bad <= n <= 231 - 1
+ * 1 <= bad <= n <= 2e31 - 1
  */
 public class FirstBadVersion {
     //soln1: binary search version2: left + increament
@@ -52,6 +52,22 @@ public class FirstBadVersion {
 
         return l; //r+1
     }
+
+    //soln3:
+//    public int firstBadVersion(int n) {
+//        int left=1, right=n,min = n;
+//        if(isBadVersion(left))return left;
+//        while(left<right){
+//            int mid = left+(right-left)/2;
+//            if(isBadVersion(mid)){
+//                right=mid;
+//                min = Math.min(mid,min);
+//            }else{
+//                left = mid+1;
+//            }
+//        }
+//        return min;
+//    }
     public boolean isBadVersion(int m){
             return true;
     }

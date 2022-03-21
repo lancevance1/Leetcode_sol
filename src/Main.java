@@ -101,17 +101,27 @@ public class Main {
 //            System.out.println(node3.val);
 //        node3=node3.next;
 //    }
-        int [][] arr = {{2,0},{0,0},{2,2}};
-        SnakeGame test = new SnakeGame(3,3,arr);
-        //["R"], ["D"], ["R"], ["U"], ["L"], ["U"]
-        String[] moveList ={"R"};
-        for (int i = 0; i < moveList.length; i++) {
-              test.move(moveList[i]);
-        }
+//        int [][] arr = {{1,2},{0,1}};
+//        SnakeGame test = new SnakeGame(3,2,arr);
+//        //["R"], ["D"], ["R"], ["U"], ["L"], ["U"]
+//        String[] moveList ={"R","D","R","U","L","U"};
+//        for (int i = 0; i < moveList.length; i++) {
+//              test.move(moveList[i]);
+//        }
+
+//    int[] test = {1,2,3,4};
+//    DivideArrayIntoEqualPairs test1 = new DivideArrayIntoEqualPairs();
+//    boolean a = test1.divideArray(test);
+//
+
+//        int[] ar = {3, 19, 8, 1};
+//        MinimumOperationsToHalveArraySum test = new MinimumOperationsToHalveArraySum();
+//        int res = test.halveArray(ar);
 
 
-
-
+        String s = "a";
+        String p = "zz";
+        MaximizeNumberofSubsequencesinaString t = new MaximizeNumberofSubsequencesinaString();
+        t.maximumSubsequenceCount(s,p);
     }
-
 }
