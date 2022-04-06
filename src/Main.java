@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -119,9 +121,30 @@ public class Main {
 //        int res = test.halveArray(ar);
 
 
-        String s = "a";
-        String p = "zz";
-        MaximizeNumberofSubsequencesinaString t = new MaximizeNumberofSubsequencesinaString();
-        t.maximumSubsequenceCount(s,p);
+//        String s = "a";
+//        String p = "zz";
+//        MaximizeNumberofSubsequencesinaString t = new MaximizeNumberofSubsequencesinaString();
+//        t.maximumSubsequenceCount(s,p);
+
+
+//        int[][] test = new int[3][2];
+//        System.out.println(test[0].length + " " + test.length);
+
+
+
+
+//        FindPalindromeWithFixedLength t = new FindPalindromeWithFixedLength();
+//        int[] arr = new int[]{1};
+//        long[] res= t.kthPalindrome(arr,1);
+
+        Stack<Integer> s = new Stack<>();
+        s.pop();
+        System.out.println();
+
+//        for(long r: res){
+//            System.out.println(r);
+//        }
+
+
     }
 }
