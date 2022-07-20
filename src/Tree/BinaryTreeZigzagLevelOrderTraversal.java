@@ -1,3 +1,7 @@
+package Tree;
+
+import Tree.TreeNode;
+
 import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
@@ -9,37 +13,34 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         Deque<TreeNode> dq = new LinkedList();
         dq.offer(root);
         int count = 0;
-        if(root==null)return res;
-        while(dq.size()!=0){
+        if (root == null) return res;
+        while (dq.size() != 0) {
             int l = dq.size();
             List<Integer> tmp = new LinkedList();
             for (int i = 0; i < l; i++) {
                 TreeNode t;
-                if(count%2==1){
-                    t= dq.poll();
-                }else{
+                if (count % 2 == 1) {
+                    t = dq.poll();
+                } else {
                     t = dq.pollLast();
                 }
 
                 tmp.add(t.val);
-                if(count%2==0) {
-                    if(t.left!=null){
+                if (count % 2 == 0) {
+                    if (t.left != null) {
                         dq.offerFirst(t.left);
                     }
-                    if(t.right!=null){
+                    if (t.right != null) {
                         dq.offerFirst(t.right);
                     }
-                }else{
-                    if(t.right!=null){
+                } else {
+                    if (t.right != null) {
                         dq.offer(t.right);
                     }
-                    if(t.left!=null){
+                    if (t.left != null) {
                         dq.offer(t.left);
                     }
-
                 }
-
-
             }
             count++;
             res.add(tmp);
@@ -48,19 +49,19 @@ public class BinaryTreeZigzagLevelOrderTraversal {
     }
 
     //soln2
-//    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+//    public List<List<Integer>> zigzagLevelOrder(Tree.TreeNode root) {
 //        List<List<Integer>> result = new ArrayList<List<Integer>>();
 //        if (root == null)
 //            return result;
 //
-//        Queue<TreeNode> queue = new LinkedList<>();
+//        Queue<Tree.TreeNode> queue = new LinkedList<>();
 //        queue.offer(root);
 //        boolean leftToRight = true;
 //        while (!queue.isEmpty()) {
 //            int levelSize = queue.size();
 //            List<Integer> currentLevel = new LinkedList<>();
 //            for (int i = 0; i < levelSize; i++) {
-//                TreeNode currentNode = queue.poll();
+//                Tree.TreeNode currentNode = queue.poll();
 //
 //                // add the node to the current level based on the traverse direction
 //                if (leftToRight)

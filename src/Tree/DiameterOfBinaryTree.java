@@ -1,22 +1,19 @@
+package Tree;
+
 /**
  * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
+ * public class Tree.TreeNode {
+ * int val;
+ * Tree.TreeNode left;
+ * Tree.TreeNode right;
+ * Tree.TreeNode(int x) { val = x; }
  * }
  */
-class TreeNode {
-    int val, depth;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x;  }
-}
-class DiameterOfBinaryTree {
+
+public class DiameterOfBinaryTree {
     int res = 0;
 
-    int maxDepth(TreeNode root){
+    int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -25,17 +22,11 @@ class DiameterOfBinaryTree {
         int rightDepth = maxDepth(root.right);
 
         res = Math.max(rightDepth + leftDepth, res);
-        return Math.max(rightDepth,leftDepth) + 1;
-
-
+        return Math.max(rightDepth, leftDepth) + 1;
     }
-
-
-
 
     public int diameterOfBinaryTree(TreeNode root) {
         maxDepth(root);
-
         return res;
     }
 }
