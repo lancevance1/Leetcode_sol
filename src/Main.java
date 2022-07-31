@@ -131,8 +131,6 @@ public class Main {
 //        System.out.println(test[0].length + " " + test.length);
 
 
-
-
 //        FindPalindromeWithFixedLength t = new FindPalindromeWithFixedLength();
 //        int[] arr = new int[]{1};
 //        long[] res= t.kthPalindrome(arr,1);
@@ -145,43 +143,45 @@ public class Main {
 //            System.out.println(r);
 //        }
 
-        class Solution {
-            public int minimumNumbers(int num, int k) {
-                int res = 0;
-                if(num == 0) return 0;
-                if(num<k)return -1;
-                if(num==k)return 1;
-                String s = String.valueOf(num);
-                int unit = (int)(s.charAt(s.length()-1)-'0');
-                if(unit==k)return 1;
-                if(k==0){
+//        class Solution {
+//            public int minimumNumbers(int num, int k) {
+//                int res = 0;
+//                if (num == 0) return 0;
+//                if (num < k) return -1;
+//                if (num == k) return 1;
+//                String s = String.valueOf(num);
+//                int unit = (int) (s.charAt(s.length() - 1) - '0');
+//                if (unit == k) return 1;
+//                if (k == 0) {
+//                    if (unit != 0) return -1;
+//                }
+//                int[] helper = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+//                List<Map> list = new ArrayList();
+//                for (int i = 0; i < helper.length; i++) {
+//                    Map<Integer, Integer> map = new HashMap<>();
+//
+//                    for (int j = 0; j < helper.length; j++) {
+//                        int tmp = helper[i] * helper[j];
+//                        String tmps = String.valueOf(tmp);
+//                        int tmpUnit = (int) (tmps.charAt(tmps.length() - 1) - '0');
+//                        if (!map.containsKey(tmpUnit))
+//                            map.put(tmpUnit, j);
+//                    }
+//                    list.add(map);
+//                }
+//
+//                var m = list.get(k - 1);
+//                res = (int) m.getOrDefault(unit, -1);
+//                return num / k < res ? -1 : res;
+//
+//
+//            }
+//        }
+//        Solution s = new Solution();
+//        var res = s.minimumNumbers(10, 2);
 
-                    if(unit!=0)return -1;
-                }
-                int[] helper = new int[]{0,1,2,3,4,5,6,7,8,9};
-                List<Map> list = new ArrayList();
-                for(int i=0;i<helper.length;i++){
-                    Map<Integer,Integer> map = new HashMap<>();
-
-                    for(int j=0;j<helper.length;j++){
-                        int tmp =helper[i]*helper[j];
-                        String tmps = String.valueOf(tmp);
-                        int tmpUnit = (int)(tmps.charAt(tmps.length()-1)-'0');
-                        if(!map.containsKey(tmpUnit))
-                            map.put(tmpUnit,j);
-                    }
-                    list.add(map);
-                }
-
-                var m = list.get(k-1);
-                res = (int)m.getOrDefault(unit,-1);
-                return num/k<res? -1:res;
-
-
-            }
-        }
-        Solution s = new Solution();
-        var res = s.minimumNumbers(10,2);
+        CountofSmallerNumbersAfterSelf c = new CountofSmallerNumbersAfterSelf();
+        List<Integer> res = c.countSmaller(new int[]{5,2,6,1});
 
     }
 }

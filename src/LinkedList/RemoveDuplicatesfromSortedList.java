@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class RemoveDuplicatesfromSortedList {
     // tc:O(n),sc:O(k),k is the number of distinc values
     // this solution is also valid for unsorted LinkedList
@@ -24,16 +26,14 @@ public class RemoveDuplicatesfromSortedList {
     // tc:O(n),sc:O(1)
     public ListNode deleteDuplicates(ListNode head) {
         ListNode cur = head, res = head;
-        if(head==null||head.next==null)return head;
-        while(cur!=null&&cur.next!=null){
-            if(cur.val==cur.next.val){
+        if (head == null || head.next == null) return head;
+        while (cur != null && cur.next != null) {
+            if (cur.val == cur.next.val) {
                 cur.next = cur.next.next;
-            }else{
-                cur=cur.next;
+            } else {
+                cur = cur.next;
             }
         }
         return res;
-
     }
-
 }
