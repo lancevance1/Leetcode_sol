@@ -1,3 +1,5 @@
+package Tree;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +29,6 @@ public class CountofSmallerNumbersAfterSelf {
         }
         res = Arrays.asList(test);
         return res;
-
     }
 
 
