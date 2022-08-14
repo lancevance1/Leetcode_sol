@@ -275,6 +275,4 @@ public class Main {
         String ret = s.smallestNumber("DDD");
         System.out.println(ret);
     }
-
-
 }
