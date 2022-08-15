@@ -1,4 +1,6 @@
 import DynamicProgramming.CombinationSumIV;
+import Tree.BinaryTreeVerticalOrderTraversal;
+import Tree.BuildTree;
 
 import java.util.*;
 
@@ -211,68 +213,73 @@ public class Main {
 //
 //        Solution t = new Solution();
 //        t.largestLocal(new int[][]{{20,8,20,6,16,16,7,16,8,10},{12,15,13,10,20,9,6,18,17,6},{12,4,10,13,20,11,15,5,17,1},{7,10,14,14,16,5,1,7,3,11},{16,2,9,15,9,8,6,1,7,15},{18,15,18,8,12,17,19,7,7,8},{19,11,15,16,1,3,7,4,7,11},{11,6,5,14,12,18,3,20,14,6},{4,4,19,6,17,12,8,8,18,8},{19,15,14,11,11,13,12,6,16,19}});
-        class Solution {
-            LinkedList<Integer> edge = new LinkedList<>();
-            Map<Integer, Integer> m;
-            List<LinkedList<Integer>> ret = new ArrayList<>();
-
-            public String smallestNumber(String pattern) {
-                String res = "123456789";
-                char[] arr = pattern.toCharArray();
-
-                int[] temp = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
-                m = new HashMap<>();
-                dfs(arr, temp, -1);
-                String s = "";
-                for (var c : ret.get(0)) {
-                    s += String.valueOf(c);
-                }
-                return s;
-            }
-            boolean find = false;
-            private boolean check(char[] arr, int[] temp, int x, int y) {
-                int val = 0;
-                if (y == -1) return true;
-                if (edge.peekLast() != null) val = edge.peekLast();
-                if (arr[y] == 'D') {
-                    if (edge.peekLast() != null) {
-                        if (val < x) return false;
-                    }
-                } else {
-                    if (edge.peekLast() != null) {
-                        if (val > x) return false;
-                    }
-                }
-                return true;
-            }
-
-            private void dfs(char[] arr, int[] temp, int y) {
-                if (ret.size() == 1) {
-                    return;
-                }
-                if (edge.size() == arr.length + 1) {
-                    ret.add(new LinkedList<>(edge));
-                    find = true;
-                    return;
-                }
-                for (int i = 1; i <= arr.length + 1; i++) {
-                    if(find)return;
-                    if (m.containsKey(i)) {
-                        continue;
-                    }
-                    if (!check(arr, temp, i, y)) continue;
-                    edge.add(i);
-                    m.put(i, 1);
-                    dfs(arr, temp, y + 1);
-
-                    edge.removeLast();
-                    m.remove(i);
-                }
-            }
-        }
-
-        Solution s = new Solution();
-        String ret = s.smallestNumber("DDD");
-        System.out.println(ret);
+//        class Solution {
+//            LinkedList<Integer> edge = new LinkedList<>();
+//            Map<Integer, Integer> m;
+//            List<LinkedList<Integer>> ret = new ArrayList<>();
+//
+//            public String smallestNumber(String pattern) {
+//                String res = "123456789";
+//                char[] arr = pattern.toCharArray();
+//
+//                int[] temp = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+//                m = new HashMap<>();
+//                dfs(arr, temp, -1);
+//                String s = "";
+//                for (var c : ret.get(0)) {
+//                    s += String.valueOf(c);
+//                }
+//                return s;
+//            }
+//            boolean find = false;
+//            private boolean check(char[] arr, int[] temp, int x, int y) {
+//                int val = 0;
+//                if (y == -1) return true;
+//                if (edge.peekLast() != null) val = edge.peekLast();
+//                if (arr[y] == 'D') {
+//                    if (edge.peekLast() != null) {
+//                        if (val < x) return false;
+//                    }
+//                } else {
+//                    if (edge.peekLast() != null) {
+//                        if (val > x) return false;
+//                    }
+//                }
+//                return true;
+//            }
+//
+//            private void dfs(char[] arr, int[] temp, int y) {
+//                if (ret.size() == 1) {
+//                    return;
+//                }
+//                if (edge.size() == arr.length + 1) {
+//                    ret.add(new LinkedList<>(edge));
+//                    find = true;
+//                    return;
+//                }
+//                for (int i = 1; i <= arr.length + 1; i++) {
+//                    if(find)return;
+//                    if (m.containsKey(i)) {
+//                        continue;
+//                    }
+//                    if (!check(arr, temp, i, y)) continue;
+//                    edge.add(i);
+//                    m.put(i, 1);
+//                    dfs(arr, temp, y + 1);
+//
+//                    edge.removeLast();
+//                    m.remove(i);
+//                }
+//            }
+//        }
+//
+//        Solution s = new Solution();
+//        String ret = s.smallestNumber("DDD");
+//        System.out.println(ret);
+        BuildTree b = new BuildTree();
+        var root = b.buildTree(new Integer[]{3,9,20,null,null,15,7});
+        BinaryTreeVerticalOrderTraversal test= new BinaryTreeVerticalOrderTraversal();
+        var res = test.verticalOrder(root);
+        System.out.println(res.toString());
     }
 }
