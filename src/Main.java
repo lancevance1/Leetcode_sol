@@ -1,4 +1,5 @@
 import DynamicProgramming.CombinationSumIV;
+import Graph.BricksFallingWhenHit;
 import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
 
@@ -276,10 +277,19 @@ public class Main {
 //        Solution s = new Solution();
 //        String ret = s.smallestNumber("DDD");
 //        System.out.println(ret);
-        BuildTree b = new BuildTree();
-        var root = b.buildTree(new Integer[]{3,9,20,null,null,15,7});
-        BinaryTreeVerticalOrderTraversal test= new BinaryTreeVerticalOrderTraversal();
-        var res = test.verticalOrder(root);
-        System.out.println(res.toString());
+//        BuildTree b = new BuildTree();
+//        var root = b.buildTree(new Integer[]{3,9,20,null,null,15,7});
+//        BinaryTreeVerticalOrderTraversal test= new BinaryTreeVerticalOrderTraversal();
+//        var res = test.verticalOrder(root);
+//        System.out.println(res.toString());
+
+        BricksFallingWhenHit t = new BricksFallingWhenHit();
+        int[][] x=new int[][]{{1,0,0,0},{1,1,0,0}};
+        int[][] y=new int[][]{{1,1},{1,0}};
+       var res= t.hitBricks(x,y);
+        for(var c:res){
+            System.out.println(c);
+        }
+
     }
 }
