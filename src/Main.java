@@ -2,6 +2,7 @@ import DynamicProgramming.CombinationSumIV;
 import Graph.BricksFallingWhenHit;
 import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
+import Tree.TreeNode;
 
 import java.util.*;
 
@@ -283,13 +284,101 @@ public class Main {
 //        var res = test.verticalOrder(root);
 //        System.out.println(res.toString());
 
-        BricksFallingWhenHit t = new BricksFallingWhenHit();
-        int[][] x=new int[][]{{1,0,0,0},{1,1,0,0}};
-        int[][] y=new int[][]{{1,1},{1,0}};
-       var res= t.hitBricks(x,y);
-        for(var c:res){
-            System.out.println(c);
+//        BricksFallingWhenHit t = new BricksFallingWhenHit();
+//        int[][] x=new int[][]{{1,0,0,0},{1,1,0,0}};
+//        int[][] y=new int[][]{{1,1},{1,0}};
+//       var res= t.hitBricks(x,y);
+//        for(var c:res){
+//            System.out.println(c);
+//        }
+//        class Solution {
+//            public String shiftingLetters(String s, int[][] shifts) {
+//                char[] arr = s.toCharArray();
+//                int [] tmp = new int[arr.length+1];
+//                for(var c:shifts){
+//                    if(c[2]>0){
+//                        tmp[c[0]]++;
+//                        tmp[c[1]+1]--;
+//                    }else{
+//                        tmp[c[0]]--;
+//                        tmp[c[1]+1]++;
+//                    }
+//                }
+//                for(int i=1;i<tmp.length;i++){
+//                    tmp[i]+=tmp[i-1];
+//                }
+//                for(int i=0;i<arr.length;i++){
+//
+//                    arr[i]=(char)(Math.floorMod(arr[i]-'a'+tmp[i], 26)+'a');
+//                }
+//                return String.valueOf(arr);
+//            }
+//        }
+//        Solution s= new Solution();
+//        s.shiftingLetters("abc",new int[][]{{0,1,0},{1,2,1},{0,2,1}});
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+        class Solution {
+            int res=0;
+            int h=-1;
+            int rootV=0;
+            int tmp=0;
+            int left1=0;
+            int right1=0;
+            public int amountOfTime(TreeNode root, int start) {
+                rootV=root.val;
+                if(root.val==start){
+                    return dfs2(root);
+                }else{
+                    return res;
+                }
+
+            }
+            private int dfs2(TreeNode node){
+                if(node!=null)return 0;
+                var left=dfs2(node.left);
+                var right=dfs2(node.right);
+
+
+                return Math.max(left,right)+1;
+            }
+            private int dfs(TreeNode node, int c, int start){
+                if(node!=null)return 0;
+                var left=dfs(node.left,c+1,start);
+                var right=dfs(node.right,c+1,start);
+                if(node.val==start){
+                    res=Math.max(c,Math.max(left,right));
+                    tmp = c+Math.max(left,right);
+                }
+                if(node.val==rootV){
+                    if(tmp==left){
+                        res+=right;
+                    }else{
+                        res+=left;
+                    }
+                }
+
+                return Math.max(left,right)+1;
+            }
         }
 
+        BuildTree b=new BuildTree();
+var r= b.buildTree(new Integer[]{1,5,3,null,4,10,6,9,2});
+Solution s = new Solution();
+s.amountOfTime(r,3);
     }
 }
