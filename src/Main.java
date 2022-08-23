@@ -45,7 +45,7 @@ public class Main {
 //        }
 
 
-//        ImplementstrStr rep = new ImplementstrStr();
+//        String.ImplementstrStr rep = new String.ImplementstrStr();
 //        String s = "aabcaabxaaaz";
 //        int[]arr =new int[s.length()];
 //
@@ -66,7 +66,7 @@ public class Main {
 
 //        System.out.println(MaximumSubarray.maxSubArray(arr));
 
-//        Heap heap = new Heap();
+//        Heap.Heap heap = new Heap.Heap();
 //        int[] res = heap.heapSort(arr);
 //        test.insertSort(arr);
 //        test.bubleSort(arr);
@@ -79,13 +79,13 @@ public class Main {
 //            System.out.println(ans[i]);
 //        }
 
-//    LinkList list = new LinkList(1);
+//    LinkedList.LinkList list = new LinkedList.LinkList(1);
 //    list.push(3);
 //        list.push(2);
 //        list.push(4);
 //
 //        list.printList();
-////       LinkList.Node node =  list.searchNode(4);
+////       LinkedList.LinkList.Node node =  list.searchNode(4);
 ////       System.out.println(node.previous.data);
 //list.deleteNode(3);
 //

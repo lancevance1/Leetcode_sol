@@ -1,3 +1,5 @@
+package Heap;
+
 public class Heap {
     public int getMax(int[] arr) {
         return arr[0];
