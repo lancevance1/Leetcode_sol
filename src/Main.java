@@ -332,53 +332,61 @@ public class Main {
  *     }
  * }
  */
-        class Solution {
-            int res=0;
-            int h=-1;
-            int rootV=0;
-            int tmp=0;
-            int left1=0;
-            int right1=0;
-            public int amountOfTime(TreeNode root, int start) {
-                rootV=root.val;
-                if(root.val==start){
-                    return dfs2(root);
-                }else{
-                    return res;
-                }
+//        class Solution {
+//            int res=0;
+//            int h=-1;
+//            int rootV=0;
+//            int tmp=0;
+//            int left1=0;
+//            int right1=0;
+//            public int amountOfTime(TreeNode root, int start) {
+//                rootV=root.val;
+//                if(root.val==start){
+//                    return dfs2(root);
+//                }else{
+//                    return res;
+//                }
+//
+//            }
+//            private int dfs2(TreeNode node){
+//                if(node!=null)return 0;
+//                var left=dfs2(node.left);
+//                var right=dfs2(node.right);
+//
+//
+//                return Math.max(left,right)+1;
+//            }
+//            private int dfs(TreeNode node, int c, int start){
+//                if(node!=null)return 0;
+//                var left=dfs(node.left,c+1,start);
+//                var right=dfs(node.right,c+1,start);
+//                if(node.val==start){
+//                    res=Math.max(c,Math.max(left,right));
+//                    tmp = c+Math.max(left,right);
+//                }
+//                if(node.val==rootV){
+//                    if(tmp==left){
+//                        res+=right;
+//                    }else{
+//                        res+=left;
+//                    }
+//                }
+//
+//                return Math.max(left,right)+1;
+//            }
+//        }
+//
+//        BuildTree b=new BuildTree();
+//var r= b.buildTree(new Integer[]{1,5,3,null,4,10,6,9,2});
+//Solution s = new Solution();
+//s.amountOfTime(r,3);
 
-            }
-            private int dfs2(TreeNode node){
-                if(node!=null)return 0;
-                var left=dfs2(node.left);
-                var right=dfs2(node.right);
-
-
-                return Math.max(left,right)+1;
-            }
-            private int dfs(TreeNode node, int c, int start){
-                if(node!=null)return 0;
-                var left=dfs(node.left,c+1,start);
-                var right=dfs(node.right,c+1,start);
-                if(node.val==start){
-                    res=Math.max(c,Math.max(left,right));
-                    tmp = c+Math.max(left,right);
-                }
-                if(node.val==rootV){
-                    if(tmp==left){
-                        res+=right;
-                    }else{
-                        res+=left;
-                    }
-                }
-
-                return Math.max(left,right)+1;
-            }
-        }
-
-        BuildTree b=new BuildTree();
-var r= b.buildTree(new Integer[]{1,5,3,null,4,10,6,9,2});
-Solution s = new Solution();
-s.amountOfTime(r,3);
+//        ReorderedPowerof2 s = new ReorderedPowerof2();
+//        s.reorderedPowerOf2(
+//                635824465);
+        int a =Integer.MAX_VALUE+1;
+        int b = Integer.MAX_VALUE+20;
+        System.out.println(b);
+        System.out.println(a);
     }
 }

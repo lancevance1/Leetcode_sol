@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class MiddleoftheLinkedList {
     // tc:o(L),sc:O(L)
     // public ListNode middleNode(ListNode head) {
