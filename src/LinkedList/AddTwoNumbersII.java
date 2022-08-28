@@ -6,6 +6,7 @@ public class AddTwoNumbersII {
         int count1 = 0, count2 = 0;
         ListNode h1 = l1;
         ListNode h2 = l2;
+        //count length of each list
         while (l1 != null) {
             count1++;
             l1 = l1.next;
@@ -22,6 +23,7 @@ public class AddTwoNumbersII {
         } else {
             res = h2;
         }
+        //add short list to long list
         if (count1 > count2) {
             while (count1 != count2) {
                 l1 = l1.next;
@@ -43,6 +45,7 @@ public class AddTwoNumbersII {
                 l2 = l2.next;
             }
         }
+        //handle carries
         int x = dfs(res);
         if (x == 1) {
             var node = new ListNode(1);
