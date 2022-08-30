@@ -1,9 +1,9 @@
-
+package Matrix;
 
 import java.util.*;
 
 // soln: 2d array, sc: O(1), tc: O(W*H+F) where W is Width, H is Height and F is the food length.
-//class SnakeGame {
+//class Matrix.SnakeGame {
 //
 //    int [][] snakeMap;
 //    int [] snakeHead;
@@ -12,7 +12,7 @@ import java.util.*;
 //    Queue moveList;
 //    int score;
 //    int[][]food;
-//    public SnakeGame(int width, int height, int[][] food) {
+//    public Matrix.SnakeGame(int width, int height, int[][] food) {
 //        snakeMap = new int[height][width];
 //        this.width = width;
 //        this.height =height;

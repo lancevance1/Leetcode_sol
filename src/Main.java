@@ -110,7 +110,7 @@ public class Main {
 //        node3=node3.next;
 //    }
 //        int [][] arr = {{1,2},{0,1}};
-//        SnakeGame test = new SnakeGame(3,2,arr);
+//        Matrix.SnakeGame test = new Matrix.SnakeGame(3,2,arr);
 //        //["R"], ["D"], ["R"], ["U"], ["L"], ["U"]
 //        String[] moveList ={"R","D","R","U","L","U"};
 //        for (int i = 0; i < moveList.length; i++) {
