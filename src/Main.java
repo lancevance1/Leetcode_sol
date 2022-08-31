@@ -1,5 +1,7 @@
 import DynamicProgramming.CombinationSumIV;
 import Graph.BricksFallingWhenHit;
+import Graph.CourseSchedule;
+import Graph.PacificAtlanticWaterFlow;
 import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
 import Tree.TreeNode;
@@ -384,9 +386,8 @@ public class Main {
 //        ReorderedPowerof2 s = new ReorderedPowerof2();
 //        s.reorderedPowerOf2(
 //                635824465);
-        int a =Integer.MAX_VALUE+1;
-        int b = Integer.MAX_VALUE+20;
-        System.out.println(b);
-        System.out.println(a);
+        int[][] arr = new int[][]{{3,0},{3,1},{6,3},{7,3},{9,7},{9,5},{5,4}};
+        CourseSchedule s = new CourseSchedule();
+        s.canFinish(10,arr);
     }
 }
