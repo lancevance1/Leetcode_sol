@@ -112,7 +112,7 @@ public class Main {
 //        node3=node3.next;
 //    }
 //        int [][] arr = {{1,2},{0,1}};
-//        Matrix.SnakeGame test = new Matrix.SnakeGame(3,2,arr);
+//        SnakeGame test = new SnakeGame(3,2,arr);
 //        //["R"], ["D"], ["R"], ["U"], ["L"], ["U"]
 //        String[] moveList ={"R","D","R","U","L","U"};
 //        for (int i = 0; i < moveList.length; i++) {
@@ -387,7 +387,12 @@ public class Main {
 //        s.reorderedPowerOf2(
 //                635824465);
         int[][] arr = new int[][]{{3,0},{3,1},{6,3},{7,3},{9,7},{9,5},{5,4}};
-        CourseSchedule s = new CourseSchedule();
-        s.canFinish(10,arr);
+//        CourseSchedule s = new CourseSchedule();
+//        s.canFinish(10,arr);
+//        BuildaMatrixWithConditions t = new BuildaMatrixWithConditions();
+//        int k =8;
+//        int [][] arr = new int[][]{ {1,2 }, {7,3 }, {4,3 }, {5,8 }, {7,8 }, {8,2 }, {5,8 }, {3,2 }, {1,3 }, {7,6 }, {4,3 }, {7,4 }, {4,8 }, {7,3 }, {7,5 } };
+//        int [][] arr1 = new int[][] { {5,7 }, {2,7 }, {4,3 }, {6,7 }, {4,3 }, {2,3 }, {6,2 } };
+//        t.buildMatrix(k,arr,arr1);
     }
 }
