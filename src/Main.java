@@ -1,7 +1,9 @@
+import BackTracking.PermutationsII;
 import DynamicProgramming.CombinationSumIV;
 import Graph.BricksFallingWhenHit;
 import Graph.CourseSchedule;
 import Graph.PacificAtlanticWaterFlow;
+import Intervals.MeetingRoomsIII;
 import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
 import Tree.TreeNode;
@@ -394,5 +396,9 @@ public class Main {
 //        int [][] arr = new int[][]{ {1,2 }, {7,3 }, {4,3 }, {5,8 }, {7,8 }, {8,2 }, {5,8 }, {3,2 }, {1,3 }, {7,6 }, {4,3 }, {7,4 }, {4,8 }, {7,3 }, {7,5 } };
 //        int [][] arr1 = new int[][] { {5,7 }, {2,7 }, {4,3 }, {6,7 }, {4,3 }, {2,3 }, {6,2 } };
 //        t.buildMatrix(k,arr,arr1);
+//        PermutationsII p = new PermutationsII();
+//        p.permuteUnique(new int[]{1,1,2});
+        MeetingRoomsIII m = new MeetingRoomsIII();
+        m.mostBooked(3,new int[][]{{39,49},{28,39},{9,29},{10,36},{22,47},{2,3},{4,49},{46,50},{45,50},{17,33}});
     }
 }
