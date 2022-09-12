@@ -1,4 +1,5 @@
 import BackTracking.PermutationsII;
+import DynamicProgramming.BestTimetoBuyandSellStockIV;
 import DynamicProgramming.CombinationSumIV;
 import Graph.BricksFallingWhenHit;
 import Graph.CourseSchedule;
@@ -398,7 +399,10 @@ public class Main {
 //        t.buildMatrix(k,arr,arr1);
 //        PermutationsII p = new PermutationsII();
 //        p.permuteUnique(new int[]{1,1,2});
-        MeetingRoomsIII m = new MeetingRoomsIII();
-        m.mostBooked(3,new int[][]{{39,49},{28,39},{9,29},{10,36},{22,47},{2,3},{4,49},{46,50},{45,50},{17,33}});
+//        MeetingRoomsIII m = new MeetingRoomsIII();
+//        m.mostBooked(3,new int[][]{{39,49},{28,39},{9,29},{10,36},{22,47},{2,3},{4,49},{46,50},{45,50},{17,33}});
+        BestTimetoBuyandSellStockIV v = new BestTimetoBuyandSellStockIV();
+        v.maxProfit(2,new int[]{
+                3,2,6,5,0,3});
     }
 }
