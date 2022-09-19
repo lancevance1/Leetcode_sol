@@ -1,6 +1,8 @@
+import ArraryHashTable.SortArraybyIncreasingFrequency;
 import BackTracking.PermutationsII;
 import DynamicProgramming.BestTimetoBuyandSellStockIV;
 import DynamicProgramming.CombinationSumIV;
+import DynamicProgramming.MaximumScorefromPerformingMultiplicationOperations;
 import Graph.BricksFallingWhenHit;
 import Graph.CourseSchedule;
 import Graph.PacificAtlanticWaterFlow;
@@ -401,8 +403,12 @@ public class Main {
 //        p.permuteUnique(new int[]{1,1,2});
 //        MeetingRoomsIII m = new MeetingRoomsIII();
 //        m.mostBooked(3,new int[][]{{39,49},{28,39},{9,29},{10,36},{22,47},{2,3},{4,49},{46,50},{45,50},{17,33}});
-        BestTimetoBuyandSellStockIV v = new BestTimetoBuyandSellStockIV();
-        v.maxProfit(2,new int[]{
-                3,2,6,5,0,3});
+//        BestTimetoBuyandSellStockIV v = new BestTimetoBuyandSellStockIV();
+//        v.maxProfit(2,new int[]{
+//                3,2,6,5,0,3});
+//        MaximumScorefromPerformingMultiplicationOperations m = new MaximumScorefromPerformingMultiplicationOperations();
+//        m.maximumScore(new int[]{1,2,3},new int[]{3,2,1});
+        SortArraybyIncreasingFrequency s = new SortArraybyIncreasingFrequency();
+        s.frequencySort(new int[]{1,1,2,2,2,3});
     }
 }
