@@ -408,7 +408,9 @@ public class Main {
 //                3,2,6,5,0,3});
 //        MaximumScorefromPerformingMultiplicationOperations m = new MaximumScorefromPerformingMultiplicationOperations();
 //        m.maximumScore(new int[]{1,2,3},new int[]{3,2,1});
-        SortArraybyIncreasingFrequency s = new SortArraybyIncreasingFrequency();
-        s.frequencySort(new int[]{1,1,2,2,2,3});
+//        SortArraybyIncreasingFrequency s = new SortArraybyIncreasingFrequency();
+//        s.frequencySort(new int[]{1,1,2,2,2,3});
+        StringAlg.MaximumDeletionsonaString s = new StringAlg.MaximumDeletionsonaString();
+        s.deleteString("aaabaab");
     }
 }

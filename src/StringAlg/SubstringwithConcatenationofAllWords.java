@@ -1,4 +1,4 @@
-package String;
+package StringAlg;
 
 import java.util.ArrayList;
 import java.util.HashMap;

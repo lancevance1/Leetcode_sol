@@ -1,7 +1,4 @@
-package String;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
+package StringAlg;
 
 public class ImplementstrStr {
     //kmp
