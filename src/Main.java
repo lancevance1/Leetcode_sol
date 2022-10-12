@@ -1,3 +1,4 @@
+import AdvancedDataStrucures.LRUCache;
 import ArraryHashTable.SortArraybyIncreasingFrequency;
 import BackTracking.PermutationsII;
 import DynamicProgramming.BestTimetoBuyandSellStockIV;
@@ -410,7 +411,37 @@ public class Main {
 //        m.maximumScore(new int[]{1,2,3},new int[]{3,2,1});
 //        SortArraybyIncreasingFrequency s = new SortArraybyIncreasingFrequency();
 //        s.frequencySort(new int[]{1,1,2,2,2,3});
-        StringAlg.MaximumDeletionsonaString s = new StringAlg.MaximumDeletionsonaString();
-        s.deleteString("aaabaab");
+//        StringAlg.MaximumDeletionsonaString s = new StringAlg.MaximumDeletionsonaString();
+//        s.deleteString("aaabaab");
+//        LRUCache lruCache = new LRUCache(2);
+//        lruCache.put(1,1);
+//        lruCache.put(2,2);
+//        System.out.println(lruCache.get(1));
+//        lruCache.put(3,3);
+//        System.out.println(lruCache.get(2));
+//        lruCache.put(4,4);
+//        System.out.println(lruCache.get(1));
+//        System.out.println(lruCache.get(3));
+//        System.out.println(lruCache.get(4));
+
+        LRUCache lruCache = new LRUCache(1);
+        lruCache.put(2,1);
+
+        System.out.println(lruCache.get(2));
+        lruCache.put(3,2);
+        System.out.println(lruCache.get(2));
+        System.out.println(lruCache.get(3));
+
+
+//                LRUCache lruCache = new LRUCache(2);
+//        lruCache.put(1,0);
+//        lruCache.put(2,2);
+//        System.out.println(lruCache.get(1));
+//        lruCache.put(3,3);
+//        System.out.println(lruCache.get(2));
+//        lruCache.put(4,4);
+//        System.out.println(lruCache.get(1));
+//        System.out.println(lruCache.get(3));
+//        System.out.println(lruCache.get(4));
     }
 }

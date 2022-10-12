@@ -3,18 +3,18 @@ import java.util.Arrays;
 public class LargestPerimeterTriangle {
     // tc: o(nlogn), sc: o(1)
     public int largestPerimeter(int[] nums) {
-        int max = 0;
         Arrays.sort(nums);
-        for(int i=nums.length-1;i>-1;i--){
-            int j=i-1;
-            int k=j-1;
-            if(j==-1||k==-1)break;
-            if(nums[i]<nums[j]+nums[k]){
-                return nums[i]+nums[j]+nums[k];
-            }else{
-                continue;
-            }
+        for (int i = nums.length - 1; i > 1; i--) {
+            int tmp = isValid(nums[i], nums[i - 1], nums[i - 2]);
+            if (tmp > 0) return tmp;
         }
-        return max;
+        return 0;
+    }
+
+    private int isValid(int x, int y, int z) {
+        if (x + y > z && x + z > y && y + z > x) {
+            return x + y + z;
+        }
+        return 0;
     }
 }
