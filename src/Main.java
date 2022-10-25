@@ -12,7 +12,13 @@ import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
 import Tree.TreeNode;
 
+import javax.xml.transform.Result;
+import java.io.*;
 import java.util.*;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
 
 public class Main {
 
@@ -446,35 +452,58 @@ public class Main {
 //    }
 
 
-        private static final int n = 15;
-        static int cnt;
+//        private static final int n = 15;
+//        static int cnt;
+//
+//        static void Dfs(int row, int shu, int pie, int na) {
+//            int ave = ((1 << n) - 1) & ~(shu | pie | na);
+//            while (ave != 0) {
+//                int p = ave & -ave;
+//                ave ^= p;
+//                if (row == n)
+//                    ++cnt;
+//                else
+//                    Dfs(row + 1, shu | p, (pie | p) >> 1, (na | p) << 1);
+//            }
+//        }
+//
+//        public static void main(String[] args) {
+//            for (int i = 0; i < 10; i++) {
+//                Dfs(1, 0, 0, 0);
+//            }
+//            long startTime = System.currentTimeMillis();
+//            for (int i = 0; i < 10; i++) {
+//                cnt = 0;
+//                Dfs(1, 0, 0, 0);
+//            }
+//            long endTime = System.currentTimeMillis();
+//            System.out.println(cnt);
+//            System.out.println("Time: " + ((endTime - startTime) / 10) + "ms");
+//        }
 
-        static void Dfs(int row, int shu, int pie, int na) {
-            int ave = ((1 << n) - 1) & ~(shu | pie | na);
-            while (ave != 0) {
-                int p = ave & -ave;
-                ave ^= p;
-                if (row == n)
-                    ++cnt;
-                else
-                    Dfs(row + 1, shu | p, (pie | p) >> 1, (na | p) << 1);
-            }
-        }
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        public static void main(String[] args) {
-            for (int i = 0; i < 10; i++) {
-                Dfs(1, 0, 0, 0);
-            }
-            long startTime = System.currentTimeMillis();
-            for (int i = 0; i < 10; i++) {
-                cnt = 0;
-                Dfs(1, 0, 0, 0);
-            }
-            long endTime = System.currentTimeMillis();
-            System.out.println(cnt);
-            System.out.println("Time: " + ((endTime - startTime) / 10) + "ms");
-        }
+        int rankedCount = Integer.parseInt(bufferedReader.readLine().trim());
 
+        List<Integer> ranked = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                .map(Integer::parseInt)
+                .collect(toList());
+
+        int playerCount = Integer.parseInt(bufferedReader.readLine().trim());
+
+        List<Integer> player = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+                .map(Integer::parseInt)
+                .collect(toList());
+
+
+
+
+
+        bufferedReader.close();
+        bufferedWriter.close();
+    }
 
 
 }
