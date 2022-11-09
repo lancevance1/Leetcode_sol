@@ -7,6 +7,7 @@ import DynamicProgramming.MaximumScorefromPerformingMultiplicationOperations;
 import Graph.BricksFallingWhenHit;
 import Graph.CourseSchedule;
 import Graph.PacificAtlanticWaterFlow;
+import Graph.ShortestPathinaGridwithObstaclesElimination;
 import Intervals.MeetingRoomsIII;
 import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
@@ -450,8 +451,8 @@ public class Main {
 ////        System.out.println(lruCache.get(3));
 ////        System.out.println(lruCache.get(4));
 //    }
-
-
+//
+//
 //        private static final int n = 15;
 //        static int cnt;
 //
@@ -466,44 +467,37 @@ public class Main {
 //                    Dfs(row + 1, shu | p, (pie | p) >> 1, (na | p) << 1);
 //            }
 //        }
+
+        public static void main(String[] args) {
+            ShortestPathinaGridwithObstaclesElimination sol = new ShortestPathinaGridwithObstaclesElimination();
+            int[][] grid = new int[][]{{0,0,0,0,0,0,0,0,0,0},{0,1,1,1,1,1,1,1,1,0},{0,1,0,0,0,0,0,0,0,0},{0,1,0,1,1,1,1,1,1,1},{0,1,0,0,0,0,0,0,0,0},{0,1,1,1,1,1,1,1,1,0},{0,1,0,0,0,0,0,0,0,0},{0,1,0,1,1,1,1,1,1,1},{0,1,0,1,1,1,1,0,0,0},{0,1,0,0,0,0,0,0,1,0},{0,1,1,1,1,1,1,0,1,0},{0,0,0,0,0,0,0,0,1,0}}
+                    ;
+            System.out.println(sol.shortestPath(grid,1));
+        }
+
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 //
-//        public static void main(String[] args) {
-//            for (int i = 0; i < 10; i++) {
-//                Dfs(1, 0, 0, 0);
-//            }
-//            long startTime = System.currentTimeMillis();
-//            for (int i = 0; i < 10; i++) {
-//                cnt = 0;
-//                Dfs(1, 0, 0, 0);
-//            }
-//            long endTime = System.currentTimeMillis();
-//            System.out.println(cnt);
-//            System.out.println("Time: " + ((endTime - startTime) / 10) + "ms");
-//        }
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
-
-        int rankedCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-        List<Integer> ranked = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
-
-        int playerCount = Integer.parseInt(bufferedReader.readLine().trim());
-
-        List<Integer> player = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
-
-
-
-
-
-        bufferedReader.close();
-        bufferedWriter.close();
-    }
+//        int rankedCount = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        List<Integer> ranked = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+//                .map(Integer::parseInt)
+//                .collect(toList());
+//
+//        int playerCount = Integer.parseInt(bufferedReader.readLine().trim());
+//
+//        List<Integer> player = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
+//                .map(Integer::parseInt)
+//                .collect(toList());
+//
+//
+//
+//
+//
+//        bufferedReader.close();
+//        bufferedWriter.close();
+//    }
 
 
 }
