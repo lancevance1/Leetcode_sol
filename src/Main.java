@@ -4,10 +4,7 @@ import BackTracking.PermutationsII;
 import DynamicProgramming.BestTimetoBuyandSellStockIV;
 import DynamicProgramming.CombinationSumIV;
 import DynamicProgramming.MaximumScorefromPerformingMultiplicationOperations;
-import Graph.BricksFallingWhenHit;
-import Graph.CourseSchedule;
-import Graph.PacificAtlanticWaterFlow;
-import Graph.ShortestPathinaGridwithObstaclesElimination;
+import Graph.*;
 import Intervals.MeetingRoomsIII;
 import Tree.BinaryTreeVerticalOrderTraversal;
 import Tree.BuildTree;
@@ -469,10 +466,9 @@ public class Main {
 //        }
 
         public static void main(String[] args) {
-            ShortestPathinaGridwithObstaclesElimination sol = new ShortestPathinaGridwithObstaclesElimination();
-            int[][] grid = new int[][]{{0,0,0,0,0,0,0,0,0,0},{0,1,1,1,1,1,1,1,1,0},{0,1,0,0,0,0,0,0,0,0},{0,1,0,1,1,1,1,1,1,1},{0,1,0,0,0,0,0,0,0,0},{0,1,1,1,1,1,1,1,1,0},{0,1,0,0,0,0,0,0,0,0},{0,1,0,1,1,1,1,1,1,1},{0,1,0,1,1,1,1,0,0,0},{0,1,0,0,0,0,0,0,1,0},{0,1,1,1,1,1,1,0,1,0},{0,0,0,0,0,0,0,0,1,0}}
-                    ;
-            System.out.println(sol.shortestPath(grid,1));
+            MostStonesRemovedwithSameRoworColumn m = new MostStonesRemovedwithSameRoworColumn();
+            m.removeStones(new int[][]{{4,5},{0,4},{0,5},{4,3},{2,2},{5,1},{0,3},{2,4},{4,0}});
+
         }
 
 //    public static void main(String[] args) throws IOException {
